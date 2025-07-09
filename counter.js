@@ -2,6 +2,8 @@ const inputFiled = document.querySelector(".input");
 const IncrementBtn = document.querySelector(".Increment")
 const DecrementBtn = document.querySelector(".Decrement")
 const ResetBtn = document.querySelector(".Reset");
+const toggleBtn = document.querySelector(".theme-toggle")
+const body = document.body;
 
 
 
@@ -44,4 +46,13 @@ ResetBtn.addEventListener('click', () =>{
 
     DecrementBtn.disabled = true;
   ResetBtn.disabled = true;
+})
+
+toggleBtn.addEventListener("click", () =>{
+  body.classList.toggle("dark-mode")
+  if(body.classList.contains("dark-mode")){
+    toggleBtn.innerHTML = "Light-Mode"
+  }else{
+    toggleBtn.innerHTML = "Dark-Mode"
+  }
 })
